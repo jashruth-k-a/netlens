@@ -1,0 +1,4 @@
+database.db
+certs/
+__pycache__/
+*.pyc
