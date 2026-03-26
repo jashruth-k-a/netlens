@@ -1,214 +1,172 @@
-# 🌐 NetLens - Automated Network Download Analyzer
+# 🚀 NetLens – Automated Network Download Analyzer
 
-A Python-based network monitoring system that analyzes download performance patterns over time using **TCP Socket Programming, SSL Security, and Real Time Visualization**.
-
----
-
-## 🚀 Project Overview
-
-NetLens is designed to simulate real-world network conditions by automatically downloading a file at regular intervals and analyzing performance metrics such as:
-
-* 📥 Download Speed (Throughput)
-* ⏱️ Time Taken
-* 📡 Latency
-* 📊 Bandwidth Estimation
-
-The system identifies **Network Congestion Trends** and highlights the **Busiest Hour** based on performance degradation.
+A distributed, SSL-secured client-server system that monitors, analyzes, and visualizes network download performance across multiple devices in real time.
 
 ---
 
-## 🧠 Architecture
+## 📌 Overview
 
-```
-Client → Server → Database → Dashboard API → Web UI
-```
+NetLens is designed to automate network performance analysis by collecting and processing download metrics such as latency, throughput, and bandwidth from multiple clients.
 
-### 🔹 Components
-
-* **Client**
-
-  * Downloads a fixed file periodically
-  * Measures network performance
-  * Sends data via TCP (SSL-secured)
-
-* **Server**
-
-  * Accepts multiple client connections
-  * Processes incoming data
-  * Stores logs in SQLite database
-
-* **Dashboard Server**
-
-  * Flask-based API
-  * Fetches data from database
-  * Provides endpoints for visualization
-
-* **Frontend (Dashboard)**
-
-  * Displays charts and statistics
-  * Updates automatically at intervals
-  * Highlights congestion patterns
+It simulates a real-world network monitoring system using low-level socket programming and secure communication.
 
 ---
 
-## ✨ Features
+## 🧠 Key Features
 
-* ✅ Automated scheduled downloads
-* ✅ Multi-client support
-* ✅ Secure communication using SSL/TLS
-* ✅ Real-time dashboard updates
-* ✅ Performance logging and analysis
-* ✅ Congestion detection (Busiest Hour)
-* ✅ Interactive charts (Chart.js)
+* 🔒 **Secure Communication** using SSL/TLS sockets
+* 🌐 **Multi-Client Architecture** (Distributed System)
+* 📊 **Interactive Dashboard** with real-time analytics
+* ⚡ **Performance Metrics Tracking**
 
----
-
-## ⚙️ Technologies Used
-
-* **Language:** Python
-* **Networking:** TCP Sockets
-* **Security:** SSL/TLS
-* **Backend:** Flask
-* **Database:** SQLite
-* **Frontend:** HTML, CSS, JavaScript (Chart.js)
+  * Latency (ms)
+  * Throughput (Mbps)
+  * Bandwidth (Mbps)
+  * Download Time
+* 💾 **Centralized Data Storage** using SQLite
+* 🚨 **Alert System** for high latency detection
+* 🔁 **Robust Handling** of timeouts and network instability
 
 ---
 
-## 📂 Project Structure
+## 🏗️ System Architecture
 
-```
-netlens/
-│
-├── client.py        # Client script
-├── server.py        # Main TCP + SSL server
-├── dashboard.py             # Flask dashboard server
-├── dashboard.html           # Frontend UI
-├── certificates.py          # SSL certificate generator
-│
-├── certs/
-│   ├── cert.pem
-│   └── key.pem
-│
-└── database.db              # SQLite database
-```
+Client → SSL Socket → Analyzer Server → Database → Dashboard
+
+### Components:
+
+* **Clients**: Perform downloads and send metrics
+* **Server**: Receives, processes, and stores data
+* **Database**: Stores logs and performance records
+* **Dashboard**: Visualizes analytics
 
 ---
 
-## 🛠️ Setup Instructions
+## 🔄 Workflow
 
-### 1️⃣ Install Dependencies
+1. Client performs download
+2. Measures network metrics
+3. Sends data securely to server
+4. Server processes and stores data
+5. Dashboard displays insights
+
+---
+
+## 📸 Screenshots
+
+### 💻 Client Execution
+
+![Client 1](screenshots/Client1.png)
+![Client 2](screenshots/Client2.png)
+
+### 🖧 Server Logs
+
+![Server](screenshots/Server.png)
+
+### 📊 Dashboard
+
+![Overview](screenshots/Dashboard1.png)
+![Charts](screenshots/Dashboard2.png)
+![Session Logs](screenshots/Dashboard3.png)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Install dependencies
 
 ```bash
-pip install flask requests urllib3
+pip install -r requirements.txt
 ```
 
----
-
-### 2️⃣ Generate SSL Certificates (Run Once)
+### 2️⃣ Run Server
 
 ```bash
-python certificates.py
+cd server
+python server.py
 ```
 
----
-
-### 3️⃣ Start the Server
+### 3️⃣ Run Client(s)
 
 ```bash
-python netlens_server.py
+cd client
+python client.py
 ```
 
----
-
-### 4️⃣ Start Dashboard
+### 4️⃣ Run Dashboard
 
 ```bash
+cd dashboard
 python dashboard.py
 ```
 
-Open in browser:
+---
 
-```
-http://localhost:8080
-```
+## 📊 Performance Evaluation
+
+The system evaluates network performance using:
+
+* Download Speed
+* Throughput
+* Latency
+* Bandwidth Utilization
+
+It supports analysis under:
+
+* Multiple concurrent clients
+* Variable network conditions
+* Real-time data aggregation
 
 ---
 
-### 5️⃣ Run Client(s)
+## ⚠️ Deployment Note
 
-```bash
-python netlens_client.py
-```
+This project is designed for **LAN-based environments**.
 
----
+Due to network restrictions:
 
-## 🧪 Testing (Recommended)
+* Public WiFi may block device communication
+* Hotspots may cause instability
 
-For demo/testing, modify:
+Recommended:
 
-```python
-INTERVAL = 5
-TOTAL_RUNS = 5
-```
-
-For actual execution:
-
-```python
-INTERVAL = 3600
-TOTAL_RUNS = 24
-```
+* Same local network
+* OR tunneling tools (e.g., ngrok)
 
 ---
 
-## 🌐 Multi-Client Setup
+## 🧪 Challenges & Learnings
 
-To simulate real-world congestion:
-
-1. Connect multiple devices to same network
-2. Update client `HOST` with server IP
-3. Run client on each device
-
----
-
-## 📊 Output
-
-* 📈 Time-series graphs (Throughput & Latency)
-* 📋 Session logs
-* ⚠️ Alerts for high latency
-* 🎯 Busiest Hour detection
+* Handling SSL handshake delays
+* Managing unstable network conditions
+* Debugging socket-level errors
+* Designing multi-client concurrent systems
 
 ---
 
-## 🧠 Key Concept
+## 🛠️ Tech Stack
 
-The busiest hour is determined by:
-
-> The time period with the **lowest average throughput**, indicating maximum network congestion.
-
----
-
-## 🎯 Learning Outcomes
-
-* Low-level socket programming (TCP)
-* Secure communication using SSL/TLS
-* Client-server architecture
-* Real-time data visualization
-* Network performance analysis
+* Python (Socket Programming, SSL)
+* SQLite (Database)
+* Flask (Dashboard)
+* HTML/CSS/JS (Visualization)
 
 ---
 
-## 🚀 Future Improvements
+## ⭐ Conclusion
 
-* WebSocket-based real-time updates
-* Cloud deployment
-* Advanced anomaly detection
-* Authentication & user roles
+NetLens demonstrates a complete end-to-end network monitoring system using low-level socket programming, secure communication, and real-time analytics.
+
+It bridges theoretical networking concepts with practical implementation.
 
 ---
-
 ## License
 
 MIT
 
 ---
-Built by [Jashruth K A](https://github.com/jashruth-k-a)
+
+Built by 
+[Jashruth K A](https://github.com/jashruth-k-a)
+[Jai Jaswanth](https://github.com/AnakinSkywalker-0)
+[Krati Patel](https://github.com/kratipatel)
