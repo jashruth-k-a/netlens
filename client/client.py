@@ -8,7 +8,7 @@ from datetime import datetime
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-HOST = "127.0.0.1"
+HOST = "192.168.25.158"
 PORT = 5000
 
 FILE_URL = "https://github.com/psf/requests/archive/refs/heads/main.zip"
@@ -55,14 +55,23 @@ def send_to_server(message):
         context.verify_mode = ssl.CERT_NONE
 
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(20)
         sock.connect((HOST, PORT))
+
         secure_socket = context.wrap_socket(sock, server_hostname=HOST)
-        time.sleep(0.2)
+
+        time.sleep(0.5)
+
         secure_socket.sendall(message.encode())
+        secure_socket.shutdown(socket.SHUT_WR)
+
+        time.sleep(0.3)
         secure_socket.close()
 
+        print("[SUCCESS] Data sent to server")
+
     except Exception as e:
-        print("[ERROR]", e)
+        print("[ERROR] Failed to send data:", e)
 
 
 def run_cycle(hour, client_id):
