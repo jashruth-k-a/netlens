@@ -1,11 +1,3 @@
-"""
-Run this ONCE to generate self-signed SSL certificates.
-Certificates are saved in the certs/ folder.
-
-Usage:
-    python generate_certs.py
-"""
-
 import subprocess
 import os
 
