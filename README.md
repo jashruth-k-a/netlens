@@ -169,7 +169,23 @@ MIT
 
 ---
 
-Built by 
+### Built by
 [Jashruth K A](https://github.com/jashruth-k-a)
 [Jai Jaswanth](https://github.com/AnakinSkywalker-0)
 [Krati Patel](https://github.com/kratipatel)
+
+---
+
+## 🤝 Contributions
+
+This project was developed collaboratively as part of the Computer Networks course, focusing on practical implementation of socket programming, secure communication, and network performance analysis.
+
+* **Jashruth K A** – Implemented SSL-based secure communication and developed the dashboard for data visualization and analysis
+* **Jai Jaswanth** – Designed and implemented the server-side logic, including connection handling and database integration
+* **Krati Patel** – Worked on the client module, including data collection, testing, and performance metric generation
+
+---
+
+## ℹ️ Note
+
+Due to centralized development and integration, most commits are from a single repository owner. However, the system design, implementation, and testing were carried out collaboratively.
