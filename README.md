@@ -56,7 +56,10 @@ Client → SSL Socket → Analyzer Server → Database → Dashboard
 
 ### 💻 Client Execution
 
+### Client 1
 ![Client 1](screenshots/Client1.jpeg)
+
+### Client 2
 ![Client 2](screenshots/Client2.png)
 
 ### 🖧 Server Logs
