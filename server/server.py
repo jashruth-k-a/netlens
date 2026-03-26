@@ -4,7 +4,7 @@ import sqlite3
 import threading
 import os
 
-HOST = "0.0.0.0"
+HOST = "192.168.25.158"
 PORT = 5000
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
