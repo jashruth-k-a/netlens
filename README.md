@@ -1,10 +1,10 @@
-# 🚀 NetLens – Automated Network Download Analyzer
+#  NetLens – Automated Network Download Analyzer
 
 A distributed, SSL-secured client-server system that monitors, analyzes, and visualizes network download performance across multiple devices in real time.
 
 ---
 
-## 📌 Overview
+##  Overview
 
 NetLens is designed to automate network performance analysis by collecting and processing download metrics such as latency, throughput, and bandwidth from multiple clients.
 
@@ -12,24 +12,24 @@ It simulates a real-world network monitoring system using low-level socket progr
 
 ---
 
-## 🧠 Key Features
+##  Key Features
 
-* 🔒 **Secure Communication** using SSL/TLS sockets
-* 🌐 **Multi-Client Architecture** (Distributed System)
-* 📊 **Interactive Dashboard** with real-time analytics
-* ⚡ **Performance Metrics Tracking**
+*  **Secure Communication** using SSL/TLS sockets
+*  **Multi-Client Architecture** (Distributed System)
+*  **Interactive Dashboard** with real-time analytics
+*  **Performance Metrics Tracking**
 
   * Latency (ms)
   * Throughput (Mbps)
   * Bandwidth (Mbps)
   * Download Time
-* 💾 **Centralized Data Storage** using SQLite
-* 🚨 **Alert System** for high latency detection
-* 🔁 **Robust Handling** of timeouts and network instability
+*  **Centralized Data Storage** using SQLite
+*  **Alert System** for high latency detection
+*  **Robust Handling** of timeouts and network instability
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 Client → SSL Socket → Analyzer Server → Database → Dashboard
 
@@ -42,7 +42,7 @@ Client → SSL Socket → Analyzer Server → Database → Dashboard
 
 ---
 
-## 🔄 Workflow
+##  Workflow
 
 1. Client performs download
 2. Measures network metrics
@@ -52,9 +52,9 @@ Client → SSL Socket → Analyzer Server → Database → Dashboard
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-### 💻 Client Execution
+###  Client Execution
 
 ### Client 1
 ![Client 1](screenshots/Client1.jpeg)
@@ -76,27 +76,27 @@ Client → SSL Socket → Analyzer Server → Database → Dashboard
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Install dependencies
+### 1️ Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Run Server
+### 2️ Run Server
 
 ```bash
 cd server
 python server.py
 ```
 
-### 3️⃣ Run Client(s)
+### 3️ Run Client(s)
 
 ```bash
 cd client
 python client.py
 ```
 
-### 4️⃣ Run Dashboard
+### 4️ Run Dashboard
 
 ```bash
 cd dashboard
@@ -105,7 +105,7 @@ python dashboard.py
 
 ---
 
-## 📊 Performance Evaluation
+##  Performance Evaluation
 
 The system evaluates network performance using:
 
@@ -122,7 +122,7 @@ It supports analysis under:
 
 ---
 
-## ⚠️ Deployment Note
+##  Deployment Note
 
 This project is designed for **LAN-based environments**.
 
@@ -138,7 +138,7 @@ Recommended:
 
 ---
 
-## 🧪 Challenges & Learnings
+##  Challenges & Learnings
 
 * Handling SSL handshake delays
 * Managing unstable network conditions
@@ -147,7 +147,7 @@ Recommended:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * Python (Socket Programming, SSL)
 * SQLite (Database)
@@ -156,7 +156,7 @@ Recommended:
 
 ---
 
-## ⭐ Conclusion
+##  Conclusion
 
 NetLens demonstrates a complete end-to-end network monitoring system using low-level socket programming, secure communication, and real-time analytics.
 
@@ -176,7 +176,7 @@ MIT
 
 ---
 
-## 🤝 Contributions
+##  Contributions
 
 This project was developed collaboratively as part of the Computer Networks course, focusing on practical implementation of socket programming, secure communication, and network performance analysis.
 
