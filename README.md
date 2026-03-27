@@ -62,11 +62,11 @@ Client → SSL Socket → Analyzer Server → Database → Dashboard
 ### Client 2
 ![Client 2](screenshots/Client2.png)
 
-### 🖧 Server Logs
+### Server Logs
 
 ![Server](screenshots/Server.png)
 
-### 📊 Dashboard
+### Dashboard
 
 ![Overview](screenshots/Dashboard1.png)
 ![Charts](screenshots/Dashboard2.png)
