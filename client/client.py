@@ -13,8 +13,8 @@ PORT = 5000
 
 FILE_URL = "https://github.com/psf/requests/archive/refs/heads/main.zip"
 
-INTERVAL = 5  # 1 hour
-TOTAL_RUNS = 5   # 24 hours
+INTERVAL = 5  #Time Gap between cycles of downloads
+TOTAL_RUNS = 5   #Analyze data over a period of cycles
 
 
 def measure_latency():
