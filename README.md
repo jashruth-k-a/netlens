@@ -165,7 +165,7 @@ It bridges theoretical networking concepts with practical implementation.
 ---
 ## License
 
-MIT
+[MIT](./LICENSE)
 
 ---
 
