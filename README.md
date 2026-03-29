@@ -165,18 +165,6 @@ NetLens demonstrates a complete end-to-end network monitoring system using low-l
 It bridges theoretical networking concepts with practical implementation.
 
 ---
-## License
-
-[MIT](./LICENSE)
-
----
-
-### Built by
-[Jashruth K A](https://github.com/jashruth-k-a)
-[Jai Jaswanth](https://github.com/AnakinSkywalker-0)
-[Krati Patel](https://github.com/kratipatel)
-
----
 
 ##  Contributions
 
@@ -189,5 +177,14 @@ This project was developed collaboratively as part of the Computer Networks cour
 ---
 
 ## ℹ️ Note
-
 Due to centralized development and integration, most commits are from a single repository owner. However, the system design, implementation, and testing were carried out collaboratively.
+
+## License
+[MIT](./LICENSE)
+
+---
+
+### Built by
+[Jashruth K A](https://github.com/jashruth-k-a)
+[Jai Jaswanth](https://github.com/AnakinSkywalker-0)
+[Krati Patel](https://github.com/kratipatel)
